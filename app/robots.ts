@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/logos"],
     },
-    sitemap: "https://oceangate.dj/sitemap.xml",
-    host: "https://oceangate.dj",
+    sitemap: "https://oceangatedjibouti.com/sitemap.xml",
+    host: "https://oceangatedjibouti.com",
   };
 }
