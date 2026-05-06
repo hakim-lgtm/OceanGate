@@ -23,8 +23,8 @@ const SITE_URL = "https://oceangatedjibouti.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Oceangate International Shipping — Maritime Agency in Djibouti",
-    template: "%s · Oceangate Djibouti",
+    default: "OCEANGATE INTERNATIONAL SHIPPING — Maritime Agency in Djibouti",
+    template: "%s · OCEANGATE INTERNATIONAL SHIPPING",
   },
   description:
     "Oceangate is the leading maritime agency at the Port of Djibouti — ship agency, cargo handling, customs, bunkering, crew services, and inland logistics. 24/7, six languages, at the gateway of the Red Sea.",
@@ -40,26 +40,26 @@ export const metadata: Metadata = {
     "cargo handling Djibouti",
     "Ethiopia transit corridor",
     "Oceangate",
-    "Oceangate International Shipping",
+    "OCEANGATE INTERNATIONAL SHIPPING",
   ],
-  authors: [{ name: "Oceangate International Shipping" }],
-  creator: "Oceangate International Shipping",
-  publisher: "Oceangate International Shipping",
+  authors: [{ name: "OCEANGATE INTERNATIONAL SHIPPING" }],
+  creator: "OCEANGATE INTERNATIONAL SHIPPING",
+  publisher: "OCEANGATE INTERNATIONAL SHIPPING",
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "Oceangate International Shipping",
-    title: "Oceangate — From the world to Djibouti",
+    siteName: "OCEANGATE INTERNATIONAL SHIPPING",
+    title: "OCEANGATE INTERNATIONAL SHIPPING — From the world to Djibouti",
     description:
       "Maritime agency at the gateway of the Red Sea. Ship agency, cargo, customs, bunkering, crew, logistics — 24/7.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oceangate International Shipping",
+    title: "OCEANGATE INTERNATIONAL SHIPPING",
     description:
       "Leading maritime agency at the Port of Djibouti — 24/7 service at the gateway of the Red Sea.",
   },
@@ -84,7 +84,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${SITE_URL}#organization`,
-  name: "Oceangate International Shipping",
+  name: "OCEANGATE INTERNATIONAL SHIPPING",
   alternateName: "Oceangate",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
@@ -135,6 +135,16 @@ const jsonLd = {
   },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}#website`,
+  name: "OCEANGATE INTERNATIONAL SHIPPING",
+  alternateName: "Oceangate Djibouti",
+  url: SITE_URL,
+  publisher: { "@id": `${SITE_URL}#organization` },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -145,6 +155,10 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -45,11 +45,12 @@ export function Footer() {
             <p className="text-xs uppercase tracking-[0.18em] text-muted">Navigation</p>
             <ul className="mt-5 space-y-2 text-sm">
               {[
-                ["Mission", "#mission"],
-                ["Djibouti", "#djibouti"],
-                ["Services", "#services"],
-                ["Heritage", "#heritage"],
-                ["Contact", "#contact"],
+                ["Mission", "/#mission"],
+                ["Djibouti", "/#djibouti"],
+                ["Services", "/#services"],
+                ["Heritage", "/#heritage"],
+                ["Insights", "/insights"],
+                ["Contact", "/#contact"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link
@@ -66,7 +67,7 @@ export function Footer() {
 
         <div className="mt-20 flex flex-col gap-4 border-t border-line pt-8 md:flex-row md:items-center md:justify-between">
           <p className="text-xs tracking-wide text-muted">
-            © {new Date().getFullYear()} Oceangate International Shipping (OGIS). All rights reserved.
+            © {new Date().getFullYear()} OCEANGATE INTERNATIONAL SHIPPING (OGIS). All rights reserved.
           </p>
           <p className="text-xs tracking-[0.18em] uppercase text-muted">
             From the world to Djibouti

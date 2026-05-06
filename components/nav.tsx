@@ -6,11 +6,12 @@ import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#mission", label: "Mission" },
-  { href: "#djibouti", label: "Djibouti" },
-  { href: "#services", label: "Services" },
-  { href: "#heritage", label: "Heritage" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#mission", label: "Mission" },
+  { href: "/#djibouti", label: "Djibouti" },
+  { href: "/#services", label: "Services" },
+  { href: "/#heritage", label: "Heritage" },
+  { href: "/insights", label: "Insights" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -35,7 +36,7 @@ export function Nav() {
     >
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 lg:px-12">
         <Link
-          href="#top"
+          href="/"
           className="text-paper hover:opacity-80 transition-opacity"
         >
           <Logo className="h-[120px] w-auto" />
@@ -61,7 +62,7 @@ export function Nav() {
             EN / FR
           </button>
           <Link
-            href="#contact"
+            href="/#contact"
             className="group relative overflow-hidden rounded-full border border-copper/40 px-5 py-2.5 text-[12px] uppercase tracking-[0.18em] text-paper transition-all hover:border-copper"
           >
             <span className="relative z-10">Get a quote</span>
@@ -98,7 +99,7 @@ export function Nav() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="mt-2 inline-block self-start rounded-full border border-copper px-5 py-2.5 text-xs uppercase tracking-[0.18em]"
             >
